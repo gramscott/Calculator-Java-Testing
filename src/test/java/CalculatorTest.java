@@ -6,35 +6,33 @@ import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
 
-    Calculator calculator;
+    private Calculator calculator;
+
 
     @Before
-    public void before() {
-        calculator = new Calculator(1, 8);
+    public void Before(){
+        calculator = new Calculator();
     }
 
     @Test
     public void canAdd(){
-        assertEquals(9, calculator.adding());
+        assertEquals(15, calculator.add(10, 5));
     }
 
     @Test
     public void canSubtract(){
-        assertEquals(-7, calculator.subtracting());
+        assertEquals(2, calculator.subtract(4, 2));
     }
 
     @Test
     public void canMultiply(){
-        assertEquals(8, calculator.multiplying());
+        assertEquals(40, calculator.multiply(4, 10));
     }
 
     @Test
     public void canDivide(){
-        assertEquals(0, calculator.dividing());
+        assertEquals(5.0, calculator.divide(25.0, 5.0), 0.0);
     }
-
-    
-
 
 
 }
